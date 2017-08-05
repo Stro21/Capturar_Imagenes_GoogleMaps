@@ -21,6 +21,7 @@
   </head>
   <body>
     <div id="map"></div>
+    <p id="center"></p>
     <script>
       var map;
       function initMap() {
@@ -31,10 +32,19 @@
           disableDefaultUI: true
         });
       }
+      var mapcenter, mapextent, newcenter;
+      function mapcoordinates(){
+        mapcenter = map.getCenter();
+<!--    document.getElementById("center").innerHTML = "latitud = " + mapcenter.lat() + " longitud = " + mapcenter.lng(); -->
+        document.getElementById("center").innerHTML = "Hola Mundo";
+      }
       
     </script>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZJU70hMfKFnthdUFimKGLS17xkBntGWI&callback=initMap">
+    </script>
+    <script>
+      mapcoordinates();
     </script>
   </body>
 </html>
