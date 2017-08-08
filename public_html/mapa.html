@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div id="map" style="width:400px;height:400px"></div>
+
+<p><button onclick="document.getElementById('demoBounds').innerHTML = map.getBounds()">Get map bounds</button></p>
+
+<h1>Bounds of the map</h1>
+<div id="demoBounds"></div>
+
+<p><button onclick="document.getElementById('demoCenter').innerHTML = map.getCenter()">Get map center</button></p>
+
+<h1>Center of the map</h1>
+<div id="demoCenter"></div>
+
+<script>
+var map;
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(-33.2481, -70.05066),
+    zoom: 18,
+    mapTypeId: "satellite",
+    disableDefaultUI: true
+  };
+  map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZJU70hMfKFnthdUFimKGLS17xkBntGWI&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
