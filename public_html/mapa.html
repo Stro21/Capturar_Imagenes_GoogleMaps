@@ -3,7 +3,7 @@
 <body>
 
 
-<div id="map" style="width:300px;height:560px"></div>
+<div id="map" style="width:1000px;height:1000px"></div>
 
 <p><button onclick="document.getElementById('demoBounds').innerHTML = map.getBounds()">Get map bounds</button></p>
 
@@ -21,9 +21,9 @@ function myMap() {
   var mapCanvas = document.getElementById("map");
   var mapOptions = {
     center: new google.maps.LatLng(-33.688, -70.177),
-    zoom: 9//,
-    // mapTypeId: "satellite",
-    // disableDefaultUI: true
+    zoom: 18,
+    mapTypeId: "satellite",
+    disableDefaultUI: true
   };
   map = new google.maps.Map(mapCanvas, mapOptions);
 }
